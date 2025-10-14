@@ -1,6 +1,5 @@
 # COMPGRAF-P1Q1
 
-Autores: Lucas Gabriel de Almeida Souza
-         Mateus Miranda Seron
+Autores: Lucas Gabriel de Almeida Souza e Mateus Miranda Seron
 
 Descrição: ...
