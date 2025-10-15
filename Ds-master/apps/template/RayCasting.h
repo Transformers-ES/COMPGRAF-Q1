@@ -1,35 +1,3 @@
-//[]---------------------------------------------------------------[]
-//|                                                                 |
-//| Copyright (C) 2018, 2022 Paulo Pagliosa.                        |
-//|                                                                 |
-//| This software is provided 'as-is', without any express or       |
-//| implied warranty. In no event will the authors be held liable   |
-//| for any damages arising from the use of this software.          |
-//|                                                                 |
-//| Permission is granted to anyone to use this software for any    |
-//| purpose, including commercial applications, and to alter it and |
-//| redistribute it freely, subject to the following restrictions:  |
-//|                                                                 |
-//| 1. The origin of this software must not be misrepresented; you  |
-//| must not claim that you wrote the original software. If you use |
-//| this software in a product, an acknowledgment in the product    |
-//| documentation would be appreciated but is not required.         |
-//|                                                                 |
-//| 2. Altered source versions must be plainly marked as such, and  |
-//| must not be misrepresented as being the original software.      |
-//|                                                                 |
-//| 3. This notice may not be removed or altered from any source    |
-//| distribution.                                                   |
-//|                                                                 |
-//[]---------------------------------------------------------------[]
-//
-// OVERVIEW: RayTracer.h
-// ========
-// Class definition for simple ray tracer.
-//
-// Author: Paulo Pagliosa
-// Last revision: 07/02/2022
-
 #ifndef __RayCasting_h
 #define __RayCasting_h
 
@@ -39,18 +7,13 @@
 #include "graphics/Renderer.h"
 
 namespace cg
-{ // begin namespace cg
+{
 
-
-/////////////////////////////////////////////////////////////////////
-//
-// RayTracer: simple ray tracer class
-// =========
 class RayTracer: public Renderer
 {
 public:
   static constexpr auto minMinWeight = float(0.001);
-  static constexpr auto maxMaxRecursionLevel = uint32_t(20);
+  static constexpr auto maxMaxRecursionLevel = uint32_t(1);
 
   RayTracer(SceneBase&, Camera&);
 
@@ -111,8 +74,8 @@ private:
     return _Vw * (x * _Iw - 0.5f) * _vrc.u + _Vh * (y * _Ih - 0.5f) * _vrc.v;
   }
 
-}; // RayTracer
+};
 
-} // end namespace cg
+}
 
-#endif // __RayTracer_h
+#endif
